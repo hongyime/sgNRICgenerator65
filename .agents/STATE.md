@@ -1,20 +1,26 @@
 # STATE — sgNRICgenerator65
 
-**Updated**: 2026-09-16
+**Updated**: 2026-09-22
 **Agent**: opencode (Sisyphus-Junior)
-**Task**: Baseline wave-2b review
+
+## Last change — 2026-09-22
+
+Fixed broken `label.yml` workflow that was blocking all Dependabot PRs. Same
+root cause as sgNRIC2003: two bugs in `.github/workflows/label.yml`:
+
+1. **Wrong config path** — workflow pointed to `.github/labeler.yml` (does not
+   exist); actual labels file is `.github/labels.yml`.
+2. **Missing permissions block** — `permissions: pull-requests: write` was
+   absent, causing the label step to fail with a 403.
+
+Both fixed identically to sgNRIC2003. Label check now passes. Dependabot PRs
+#42 and #41 were subsequently merged.
 
 ## Status
-COMPLETE — baseline review done, no issues found.
 
-## Stack
-Python / Flask 3.1.3 · Pillow 12.1.1 · Flask-Login · Flask-WTF · gunicorn · gevent
+DONE — label workflow fixed, PRs #42 and #41 merged.
+Ended because: task complete.
 
-## Findings
-- No open PRs
-- No hardcoded secrets in .js/.html/.py
-- Dependencies pinned and current-looking
-- Clean working tree on main
+## Next steps
 
-## Next Steps
-None. Repo is healthy. Monitor Dependabot PRs as they arrive.
+None. Repo is healthy. Monitor future Dependabot PRs as they arrive.
