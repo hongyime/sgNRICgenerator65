@@ -12,3 +12,5 @@
 - Fixed `.github/workflows/label.yml`: wrong config path (`.github/labeler.yml` → `.github/labels.yml`) and missing `permissions: pull-requests: write` block. Identical root cause to sgNRIC2003.
 - Verified label check passes after fix.
 - Merged Dependabot PRs #42 and #41 (previously blocked by the broken workflow).
+
+- 2026-09-27: Prepared reviewed portability/privacy changes on the current default branch with maintenance-only file selection and preserved original workspace state.
