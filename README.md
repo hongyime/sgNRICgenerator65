@@ -29,6 +29,23 @@ This repository contains tools to generate barcodes for Singapore National Regis
 
 ## Usage
 
+### Windows and Linux setup
+
+Windows users can keep `setup.bat`. Linux users can run:
+
+```sh
+sh setup.sh
+. .venv-linux/bin/activate
+python app.py
+```
+
+The Linux setup uses `.venv-linux` so a shared checkout does not reuse the
+Windows `.venv`. Set `VENV_DIR` to a different environment directory when needed;
+on an SMB checkout, prefer a Linux-local environment. Setup preserves an existing
+unusable environment and reports an error instead of deleting it. Run setup again
+when requirements change. The existing Python CLI and test commands work from the
+activated environment; the generation commands may write many files, as noted below.
+
 ### 1. Web Application (Flask)
 To start the web server, run:
 ```bash
