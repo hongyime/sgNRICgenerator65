@@ -1,3 +1,7 @@
+## Portability maintenance - 2026-09-27
+
+- Added an explicit Linux setup entry point with a separate virtual environment and documented native commands. Stub contracts verify argument forwarding, failure propagation and preservation of unusable existing environments.
+
 # STATE — sgNRICgenerator65
 
 **Updated**: 2026-09-22

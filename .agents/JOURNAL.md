@@ -12,3 +12,5 @@
 - Fixed `.github/workflows/label.yml`: wrong config path (`.github/labeler.yml` → `.github/labels.yml`) and missing `permissions: pull-requests: write` block. Identical root cause to sgNRIC2003.
 - Verified label check passes after fix.
 - Merged Dependabot PRs #42 and #41 (previously blocked by the broken workflow).
+
+- 2026-09-27: Added an explicit Linux setup entry point with a separate virtual environment and documented native commands. Stub contracts verify argument forwarding, failure propagation and preservation of unusable existing environments.
